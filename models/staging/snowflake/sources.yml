@@ -1,0 +1,83 @@
+version: 2
+
+models:
+	- name: BIG_TABLE.ALL_TRANSACTIONS
+	  columns:
+		- name: TRANSACTION_ID
+		  description: Unique identifier for the transaction.
+		- name: PROPERTY_ID
+		  description: Unique identifier for the property.
+		- name: PROPERTY_TYPE
+		  description: Type of the property (e.g., Condo, House).
+		- name: PROPERTY_SIZE
+		  description: Size of the property in square feet.
+		- name: BEDROOMS
+		  description: Number of bedrooms in the property.
+		- name: BATHROOMS
+		  description: Number of bathrooms in the property.
+		- name: LISTING_DATE
+		  description: Date the property was listed.
+		- name: PROPERTY_ADDRESS
+		  description: Street address of the property.
+		- name: PROPERTY_CITY
+		  description: City where the property is located.
+		- name: PROPERTY_STATE
+		  description: State where the property is located.
+		- name: PROPERTY_ZIP_CODE
+		  description: Zip code of the property's location.
+		- name: CUSTOMER_ID
+		  description: Unique identifier for the customer.
+		- name: CUSTOMER_FIRST_NAME
+		  description: First name of the customer.
+		- name: CUSTOMER_LAST_NAME
+		  description: Last name of the customer.
+		- name: CUSTOMER_GENDER
+		  description: Gender of the customer.
+		- name: CUSTOMER_BIRTH_DATE
+		  description: Birth date of the customer.
+		- name: CUSTOMER_EMAIL
+		  description: Email address of the customer.
+		- name: CUSTOMER_PHONE
+		  description: Phone number of the customer.
+		- name: CUSTOMER_TYPE
+		  description: Type of customer (Buyer, Renter, etc.).
+		- name: CUSTOMER_ADDRESS
+		  description: Street address of the customer.
+		- name: CUSTOMER_CITY
+		  description: City where the customer resides.
+		- name: CUSTOMER_STATE
+		  description: State where the customer resides.
+		- name: CUSTOMER_ZIP_CODE
+		  description: Zip code of the customer's residence.
+		- name: AGENT_ID
+		  description: Unique identifier for the agent.
+		- name: AGENT_FIRST_NAME
+		  description: First name of the agent.
+		- name: AGENT_LAST_NAME
+		  description: Last name of the agent.
+		- name: AGENT_EMAIL
+		  description: Email address of the agent.
+		- name: AGENT_PHONE
+		  description: Phone number of the agent.
+		- name: BRANCH_ID
+		  description: Unique identifier for the branch.
+		- name: BRANCH_NAME
+		  description: Name of the branch office.
+		- name: BRANCH_MANAGER
+		  description: Manager of the branch office.
+		- name: BRANCH_ADDRESS
+		  description: Street address of the branch office.
+		- name: BRANCH_CITY
+		  description: City where the branch office is located.
+		- name: BRANCH_STATE
+		  description: State where the branch office is located.
+		- name: BRANCH_ZIP_CODE
+		  description: Zip code of the branch's location.
+		- name: TRANSACTION_TYPE
+		  description: Type of transaction (Rent, Sale, etc.).
+		- name: TRANSACTION_DATE
+		  description: Date of the transaction.
+		- name: TRANSACTION_AMOUNT
+		  description: Amount of the transaction.
+		- name: TRANSACTION_STATUS
+		  description: Status of the transaction (Pending, Completed, etc.).
