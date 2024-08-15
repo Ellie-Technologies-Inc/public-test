@@ -1,0 +1,4 @@
+WITH transformed AS (
+SELECT * FROM NORMALIZED.DATES
+)
+SELECT * FROM transformed;

@@ -1,0 +1,29 @@
+version: 2
+
+models:
+	- name: NORMALIZED.AGENTS
+	  columns:
+		- name: AGENT_ID
+		  description: Unique identifier for the agent.
+		- name: FIRST_NAME
+		  description: First name of the agent.
+		- name: LAST_NAME
+		  description: Last name of the agent.
+		- name: EMAIL
+		  description: Email address of the agent.
+		- name: PHONE
+		  description: Phone number of the agent.
+	- name: NORMALIZED.DATES
+	  columns:
+		- name: DATE_ID
+		  description: hellodasdasdad
+		- name: DATE
+		  description: 
+		- name: DAY
+		  description: 
+		- name: MONTH
+		  description: 
+		- name: YEAR
+		  description: 
+		- name: QUARTER
+		  description:
