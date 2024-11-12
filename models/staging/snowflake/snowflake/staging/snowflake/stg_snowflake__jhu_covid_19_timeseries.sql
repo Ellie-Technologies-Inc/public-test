@@ -1,0 +1,24 @@
+with
+  "staging" as (
+    select
+      COUNTRY_REGION,
+      PROVINCE_STATE,
+      COUNTY,
+      FIPS,
+      LAT,
+      LONG,
+      ISO3166_1,
+      ISO3166_2,
+      DATE,
+      CASES,
+      CASE_TYPE,
+      LAST_UPDATE_DATE,
+      LAST_REPORTED_FLAG,
+      DIFFERENCE
+    from
+      "COVID19_EPIDEMIOLOGICAL_DATA"."PUBLIC"."JHU_COVID_19_TIMESERIES"
+  )
+select
+  *
+from
+  "staging"

@@ -1,0 +1,180 @@
+version: 2
+sources:
+  - name: PUBLIC
+    database: COVID19_EPIDEMIOLOGICAL_DATA
+    schema: PUBLIC
+    tables:
+      - name: PUBLIC.RKI_GER_COVID19_DASHBOARD
+        description: >-
+          This table records detailed COVID-19 statistics per district. Each row
+          represents a district, including its demographic data, COVID-19 cases
+          and deaths statistics, and related identifiers.
+        columns:
+          - name: DISTRICT_ID
+            description: Unique identifier for the district.
+            data_type: TEXT
+          - name: COUNTY
+            description: Name of the county.
+            data_type: TEXT
+          - name: STATE_ID
+            description: Identifier for the state to which the district belongs.
+            data_type: TEXT
+          - name: STATE
+            description: Name of the state.
+            data_type: TEXT
+          - name: DISTRICT_TYPE
+            description: Type of district (e.g., city, rural).
+            data_type: TEXT
+          - name: POPULATION
+            description: Population of the district.
+            data_type: NUMBER
+          - name: DEATH_RATE
+            description: Death rate from COVID-19 in the district.
+            data_type: FLOAT
+          - name: CASES
+            description: Total number of COVID-19 cases reported in the district.
+            data_type: NUMBER
+          - name: DEATHS
+            description: Total number of deaths due to COVID-19 in the district.
+            data_type: NUMBER
+          - name: CASES_PER_100K
+            description: Number of COVID-19 cases per 100,000 people.
+            data_type: FLOAT
+          - name: CASES_PER_POPULATION
+            description: Ratio of cases to the total population.
+            data_type: FLOAT
+          - name: CASES7_PER_100K
+            description: Number of cases per 100,000 people over the last 7 days.
+            data_type: FLOAT
+          - name: LAST_UPDATE
+            description: Date and time of the last update.
+            data_type: TIMESTAMP_NTZ
+          - name: ISO3166_1
+            description: ISO 3166-1 country code.
+            data_type: TEXT
+          - name: ISO3166_2
+            description: ISO 3166-2 state code.
+            data_type: TEXT
+          - name: LAST_UPDATE_DATE
+            description: Date of the last update.
+            data_type: TIMESTAMP_NTZ
+          - name: LAST_REPORTED_FLAG
+            description: Indicates whether it was the latest report.
+            data_type: BOOLEAN
+      - name: PUBLIC.JHU_DASHBOARD_COVID_19_GLOBAL
+        description: >-
+          Each record represents COVID-19 statistics for a specific country on a
+          particular date, including confirmed cases, deaths, testing rates, and
+          geolocation.
+        columns:
+          - name: COUNTRY_REGION
+            description: Name of the country or region
+            data_type: TEXT
+          - name: PROVINCE_STATE
+            description: Name of the province or state
+            data_type: TEXT
+          - name: COUNTY
+            description: Name of the county
+            data_type: TEXT
+          - name: FIPS
+            description: Federal Information Processing Standards code
+            data_type: TEXT
+          - name: DATE
+            description: Date of the reported data
+            data_type: DATE
+          - name: ACTIVE
+            description: Number of active COVID-19 cases
+            data_type: FLOAT
+          - name: PEOPLE_TESTED
+            description: Number of people tested
+            data_type: FLOAT
+          - name: CONFIRMED
+            description: Number of confirmed COVID-19 cases
+            data_type: NUMBER
+          - name: PEOPLE_HOSPITALIZED
+            description: Number of people hospitalized
+            data_type: NUMBER
+          - name: DEATHS
+            description: Number of deaths from COVID-19
+            data_type: NUMBER
+          - name: RECOVERED
+            description: Number of recovered COVID-19 cases
+            data_type: FLOAT
+          - name: INCIDENT_RATE
+            description: Incident rate
+            data_type: FLOAT
+          - name: TESTING_RATE
+            description: Testing rate
+            data_type: FLOAT
+          - name: HOSPITALIZATION_RATE
+            description: Hospitalization rate
+            data_type: FLOAT
+          - name: MORTALITY_RATE
+            description: Mortality rate
+            data_type: FLOAT
+          - name: LONG
+            description: Longitude
+            data_type: FLOAT
+          - name: LAT
+            description: Latitude
+            data_type: FLOAT
+          - name: ISO3166_1
+            description: ISO 3166-1 alpha-2 country code
+            data_type: TEXT
+          - name: ISO3166_2
+            description: ISO 3166-2 country code
+            data_type: TEXT
+          - name: LAST_UPDATE_DATE
+            description: Last date when data was updated
+            data_type: TIMESTAMP_NTZ
+          - name: LAST_REPORTED_FLAG
+            description: Flag indicating the last reported data
+            data_type: BOOLEAN
+      - name: PUBLIC.JHU_COVID_19_TIMESERIES
+        description: >-
+          This table records COVID-19 case data for different countries,
+          provinces/states, and counties, including the number of cases recorded
+          on a specific date, type of cases, and geographical details.
+        columns:
+          - name: COUNTRY_REGION
+            description: Name of the country or region
+            data_type: TEXT
+          - name: PROVINCE_STATE
+            description: Name of the province or state
+            data_type: TEXT
+          - name: COUNTY
+            description: Name of the county
+            data_type: TEXT
+          - name: FIPS
+            description: Federal Information Processing Standards code
+            data_type: TEXT
+          - name: LAT
+            description: Latitude coordinates
+            data_type: FLOAT
+          - name: LONG
+            description: Longitude coordinates
+            data_type: FLOAT
+          - name: ISO3166_1
+            description: ISO 3166-1 Alpha-2 country code
+            data_type: TEXT
+          - name: ISO3166_2
+            description: ISO 3166-2 sub-country code
+            data_type: TEXT
+          - name: DATE
+            description: Date of the record in ISO8601 format
+            data_type: DATE
+          - name: CASES
+            description: Number of recorded cases
+            data_type: FLOAT
+          - name: CASE_TYPE
+            description: Type of cases (e.g., Confirmed)
+            data_type: TEXT
+          - name: LAST_UPDATE_DATE
+            description: Last updated date in ISO8601 format
+            data_type: TIMESTAMP_NTZ
+          - name: LAST_REPORTED_FLAG
+            description: Flag indicating if this is the last reported data
+            data_type: BOOLEAN
+          - name: DIFFERENCE
+            description: Difference in the number of cases since the previous report
+            data_type: NUMBER

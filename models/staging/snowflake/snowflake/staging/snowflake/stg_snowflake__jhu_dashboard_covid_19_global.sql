@@ -1,0 +1,31 @@
+with
+  "staging" as (
+    select
+      COUNTRY_REGION,
+      PROVINCE_STATE,
+      COUNTY,
+      FIPS,
+      DATE,
+      ACTIVE,
+      PEOPLE_TESTED,
+      CONFIRMED,
+      PEOPLE_HOSPITALIZED,
+      DEATHS,
+      RECOVERED,
+      INCIDENT_RATE,
+      TESTING_RATE,
+      HOSPITALIZATION_RATE,
+      MORTALITY_RATE,
+      LONG,
+      LAT,
+      ISO3166_1,
+      ISO3166_2,
+      LAST_UPDATE_DATE,
+      LAST_REPORTED_FLAG
+    from
+      "COVID19_EPIDEMIOLOGICAL_DATA"."PUBLIC"."JHU_DASHBOARD_COVID_19_GLOBAL"
+  )
+select
+  *
+from
+  "staging"
